@@ -35,3 +35,17 @@ int main() {
 	// no custome deleter
 	unique_ptr<PlayWithUnique[]> up6(new PlayWithUnique[2]);
 }
+/** Output:
+ PlayWithUnique created with parameter:created_with_new_1
+PlayWithUnique created with parameter:created_with_new_2
+PlayWithUnique created with parameter:created_with_new_3
+up2 deleted
+PlayWithUnique destroyed: created_with_new_3
+up3 deleted
+PlayWithUnique created with default:default
+PlayWithUnique created with default:default
+PlayWithUnique destroyed: default
+PlayWithUnique destroyed: default
+PlayWithUnique destroyed: created_with_new_1
+Press any key to continue . . .
+**/

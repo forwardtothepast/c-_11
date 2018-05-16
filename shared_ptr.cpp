@@ -29,3 +29,16 @@ int main() {
 	// invoke with new if you need a custom deleter
 	shared_ptr<PlayWithShared> sp5(new PlayWithShared[2], [](PlayWithShared *p) {delete[] p; });
 }
+/**output:
+ * PlayWithShared created with parameter:created_with_make_shared
+PlayWithShared created with parameter:created_with_new
+sp1.use_count() : 3
+sp1.unique() : 0
+PlayWithShared created with default:default
+PlayWithShared created with default:default
+PlayWithShared destroyed: default
+PlayWithShared destroyed: default
+PlayWithShared destroyed: created_with_make_shared
+PlayWithShared destroyed: created_with_new
+Press any key to continue .
+ **/
